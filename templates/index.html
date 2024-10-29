@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Speed Simulator</title>
+</head>
+
+<body>
+    <h1>Train Speed Simulator</h1>
+
+    <form method="post">
+        <label for="latitude">Latitude:</label>
+        <input type="text" id="latitude" name="latitude" required>
+        <br><br>
+
+        <label for="longitude">Longitude:</label>
+        <input type="text" id="longitude" name="longitude" required>
+        <br><br>
+
+        <button type="submit">Submit Location</button>
+    </form>
+
+    {% if speed is not none %}
+    <h2>Train Speed: {{ speed }} km/h</h2>
+    {% endif %}
+</body>
+
+</html>
